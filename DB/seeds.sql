@@ -1,0 +1,1 @@
+INSERT INTO happyhour (hh_name, hh_address, hh_duration, hh_drinks, hh_food) VALUES ('Halycon', '1234 fake street', 'm-f 4-6pm', '$3 Draft Beer, $3 Bottle Beer, $3 House Wine, $3 Frozen Margaritas – strawberry, mango, lime','$6 Agave Nachos, $5 Quesadilla');

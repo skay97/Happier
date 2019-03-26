@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 var db = require("../models");
 
 module.exports = function(app) {
@@ -21,9 +22,15 @@ module.exports = function(app) {
       });
     });
   });
+  
+  // add get route to submit page
+  app.get("/POST", function(req,res){
+    res.render("202");
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
+
 };
