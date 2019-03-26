@@ -1,7 +1,25 @@
 module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+  var happyHour = sequelize.define("happyHour", {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    duration: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    food: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    duration: {
+      type: DataTypes.STRING,
+      allowNull: true
+    }
   });
-  return Example;
+  return happyHour;
 };
