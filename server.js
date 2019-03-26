@@ -2,7 +2,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-var Sequalize = require('sequelize');
+var sequalize = require("sequelize");
 
 var db = require("./models");
 
