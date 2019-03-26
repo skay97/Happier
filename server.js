@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-const Sequelize = require('sequelize');
+var Sequalize = require('sequelize');
 
 var db = require("./models");
 
