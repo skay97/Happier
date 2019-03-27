@@ -1,25 +1,26 @@
+/* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
-  var happyHour = sequelize.define("happyHour", {
-    name: {
+  var HappyHour = sequelize.define("happyhour", {
+    hh_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    address: {
+    hh_address: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    duration: {
+    hh_duration: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    food: {
+    hh_drinks: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    duration: {
+    hh_food: {
       type: DataTypes.STRING,
       allowNull: true
     }
   });
-  return happyHour;
+  return HappyHour;
 };
