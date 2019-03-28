@@ -43,7 +43,7 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    
+
     $("#submit").on("click", uploadNewEntry);
 
     // function to post new entry to api
@@ -60,10 +60,11 @@
             hh_description: $("#description-text").val().trim()
         }
         console.log(dataToSubmit);
-        $.post("/api/happyhour", dataToSubmit, function(data, status){
+        $.post("/api/happyhour", dataToSubmit, function (data, status) {
             console.log("entry added:");
             console.log(data);
         });
+        location.href = "/view"
     }
 
 </script>

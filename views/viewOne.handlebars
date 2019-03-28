@@ -3,15 +3,14 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h3>Happy Hour Lists:</h3>
+        <h3>{{hhEntry.hh_name}}</h3>
         <ul id="hh-list" class="list-group">
-          {{#each hhEntries}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="/view/{{this.id}}">{{this.hh_name}}</a>
-            <p>Duration: {{this.hh_duration}}, Address: {{this.hh_address}}</p>
-            <p>Drinks: {{this.hh_drinks}} Food: {{this.hh_food}} </p>
+            <p>Duration: {{hhEntry.hh_duration}}</p> 
+            <p>Address: {{hhEntry.hh_address}}</p>
+            <p>Drinks: {{hhEntry.hh_drinks}}</p>
+            <p>Food: {{hhEntry.hh_food}}</p>
           </li>
-          {{/each}}
         </ul>
         <p>pick your favorite :)</p>
       </div>
