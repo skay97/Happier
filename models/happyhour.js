@@ -20,6 +20,10 @@ module.exports = function(sequelize, DataTypes) {
     hh_food: {
       type: DataTypes.STRING,
       allowNull: true
+    },
+    hh_description: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
   return HappyHour;
