@@ -31,6 +31,19 @@ module.exports = function(app) {
       });
     });
   });
+
+  app.get("/view/:id", function(req, res) {
+    db.happyhour.findOne({
+      where:{
+        id:req.params.id
+      }
+    }).then(function(dbResult) {
+      res.render("viewOne", {
+        msg: "Welcome to view page!",
+        hhEntry: dbResult
+      });
+    });
+  });
   
   // add get route to submit page
   app.get("/POST", function(req,res){
