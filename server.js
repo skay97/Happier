@@ -5,6 +5,10 @@ var exphbs = require("express-handlebars");
 var sequalize = require("sequelize");
 var db = require("./models");
 
+// upload requires
+var multer = require('multer');
+var upload = multer({ dest: __dirname + 'uploads/images' });
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -28,6 +32,16 @@ require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
+
+// upload use (there is no route to view json but looks like its posting)
+// app.post('/upload', upload.single('photo'), (req, res) => {
+//   if (req.file) {
+//     res.json(req.file);
+//   }
+//   else throw 'error';
+// });
+
+
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
@@ -35,8 +49,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
