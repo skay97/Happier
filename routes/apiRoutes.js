@@ -23,4 +23,14 @@ module.exports = function(app) {
         res.json(dbResult);
       });
   });
+
+
+// upload picture
+app.post("/upload", function(req, res) {
+  db.happyhour
+  upload.single('photo');
+  res.json(req.file);
+
+})
+
 };
