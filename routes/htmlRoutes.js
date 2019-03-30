@@ -50,7 +50,7 @@ module.exports = function (app) {
     });
   });
 
-  // add get route to submit page
+  // add get route to submit page 
   app.get("/POST", function (req, res) {
     res.render("202");
   });
@@ -61,11 +61,5 @@ module.exports = function (app) {
   });
 
 
-// upload
-app.post('/upload', upload.single('photo'), (req, res) => {
-  if (req.file) {
-    res.json(req.file);
-  }
-  else throw 'error';
-});
+
 };

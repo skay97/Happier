@@ -33,15 +33,6 @@ require("./routes/htmlRoutes")(app);
 var syncOptions = { force: false };
 
 
-// upload use (there is no route to view json but looks like its posting)
-// app.post('/upload', upload.single('photo'), (req, res) => {
-//   if (req.file) {
-//     res.json(req.file);
-//   }
-//   else throw 'error';
-// });
-
-
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {

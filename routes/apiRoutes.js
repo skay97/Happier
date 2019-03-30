@@ -1,4 +1,7 @@
 var db = require("../models");
+var multer = require('multer');
+var upload = multer({dest: __dirname + '/uploads/images'});
+
 
 module.exports = function(app) {
   // Get all examples
@@ -21,16 +24,16 @@ module.exports = function(app) {
       .destroy({ where: { id: req.params.id } })
       .then(function(dbResult) {
         res.json(dbResult);
+
       });
   });
 
 
 // upload picture
-app.post("/upload", function(req, res) {
-  db.happyhour
-  upload.single('photo');
-  res.json(req.file);
-
-})
-
+app.post('/upload', upload.single('photo'), (req, res) => {
+  if(req.file) {
+      res.json(req.file);
+  }
+  else throw 'error';
+});
 };
