@@ -51,8 +51,11 @@ module.exports = function (app) {
   });
 
   // add get route to submit page 
-  app.get("/POST", function (req, res) {
-    res.render("202");
+  app.post('/upload', upload.single('photo'), (req, res) => {
+    if (req.file) {
+      res.json(req.file);
+    }
+    else throw 'error';
   });
 
   // Render 404 page for any unmatched routes
