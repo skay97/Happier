@@ -42,44 +42,61 @@
             </div>
         </div>
     </div>
-</div>
 
 
-                    <div class="form-group">
-                        <label for="pictures-text">PICTURES</label>
-                        <form action="/upload" method="post" enctype="multipart/form-data" target="hidden-form">
-                            <input class="form-control-file" type="file" accept="image/*" name="photo">
-                            <IFRAME style="display:none" name="hidden-form"></IFRAME>
-                            <input class="btn mt-3" type="submit" value="upload">
-                        </form>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="form-group">
+                    <label for="pictures-text">PICTURES</label>
+                    <form id="imgForm" action="/upload" method="post" enctype="multipart/form-data"
+                        target="hidden-form">
+                        <input class="form-control-file" type="file" accept="image/*" name="photo">
+                        {{!-- <IFRAME style="display:none" name="hidden-form"></IFRAME> --}}
+                        <input id="imgUpload" class="btn mt-3" type="submit" value="upload">
+                    </form>
+                    <p id="img display"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $("#submit").on("click", uploadNewEntry);
+
+        // function to post new entry to api
+        function uploadNewEntry(event) {
+            event.preventDefault();
+            console.log("hahahahahhaha");
+
+            dataToSubmit = {
+                hh_name: $("#name-text").val().trim(),
+                hh_address: $("#address-text").val().trim(),
+                hh_duration: $("#duration-text").val().trim(),
+                hh_drinks: $("#description-text").val().trim(),
+                hh_food: $("#food-text").val().trim(),
+                hh_description: $("#description-text").val().trim()
+            }
+            console.log(dataToSubmit);
+            $.post("/api/happyhour", dataToSubmit, function (data, status) {
+                console.log("entry added:");
+                console.log(data);
+            });
+            location.href = "/view"
+        };
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        var iFrame = document.getElementsByName("photo");
+        var form = document.getElementById("#imgForm");
 
-<script>
+        iFrame.onload = function () {
+            console.log("tester mc testerson");
+            
+        };
 
-    $("#submit").on("click", uploadNewEntry);
+        form.submit();
 
-    // function to post new entry to api
-    function uploadNewEntry(event) {
-        event.preventDefault();
-        console.log("hahahahahhaha");
-
-        dataToSubmit = {
-            hh_name: $("#name-text").val().trim(),
-            hh_address: $("#address-text").val().trim(),
-            hh_duration: $("#duration-text").val().trim(),
-            hh_drinks: $("#description-text").val().trim(),
-            hh_food: $("#food-text").val().trim(),
-            hh_description: $("#description-text").val().trim()
-        }
-        console.log(dataToSubmit);
-        $.post("/api/happyhour", dataToSubmit, function (data, status) {
-            console.log("entry added:");
-            console.log(data);
-        });
-        location.href = "/view"
-    };
-
-</script>
+    </script>
