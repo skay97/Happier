@@ -28,8 +28,10 @@ module.exports = function (app) {
   });
 
   // view happy hours
-  app.get("/view", function (req, res) {
-    db.happyhour.findAll({}).then(function (dbResult) {
+  app.get("/view", function(req, res) {
+    db.happyhour.findAll({}).then(function(dbResult) {
+      console.log(dbResult);
+      
       res.render("view", {
         msg: "Welcome to view page!",
         hhEntries: dbResult
