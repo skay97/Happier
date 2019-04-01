@@ -1,56 +1,60 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx2mBeHdyE4fngY5daB9i4IXK79Zy8_lA&libraries=places"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx2mBeHdyE4fngY5daB9i4IXK79Zy8_lA&libraries=places"></script>
 <div id="home">
-    <div class="container">
-        <div class="row">
-            <div class="col-8 offset-2">
-                <h1>{{msg}}</h1>
-                <h2>Happy Hour Coordinator</h2>
-                <form class="clearfix mb-4" action="POST">
-                    <div class="form-group">
-                        <label for="name-text">Name!</label>
-                        <input type="text" id="name-text" class="form-control" aria-describedby="example-text"
-                            placeholder="Please enter name of the discovered happy hour">
-                    </div>
-                    <div class="form-group">
-                        <label for="address-text">Address!</label>
-                        <input type="text" id="address-text" class="form-control" aria-describedby="example-text"
-                            placeholder="Please enter address">
-                        <label for="duration-text">Duration!</label>
-                        <input type="text" id="duration-text" class="form-control" aria-describedby="example-text"
-                            placeholder="Please enter duration">
-                        <label for="drinks-text">Drinks!</label>
-                        <input type="text" id="drinks-text" class="form-control" aria-describedby="example-text"
-                            placeholder="Please enter drinks">
-                        <label for="food-text">Food!</label>
-                        <input type="text" id="food-text" class="form-control" aria-describedby="example-text"
-                            placeholder="Please enter food">
-                    </div>
-                    <div class="form-group">
-                        <label for="description-text">Description</label>
-                        <textarea class="form-control" id="description-text" aria-describedby="example-description"
-                            placeholder="Why is this place so amazing?"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="pictures-text">PICTURES</label>
-                        <input type="text" id="pictures-text" class="form-control" aria-describedby="example-text"
-                            placeholder="Upload pictures here so we know you this magical place is tangible and accessible">
-                    </div>
-                    <button id="submit" class="btn btn-primary float-right">Submit</button>
-                </form>
+    <header>LOGO</header>
+    <div class="beer">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h1 class="enter-h1">{{msg}}</h1>
+                    <h2>Happy Hour Coordinator</h2>
+                    <form class="clearfix mb-4" action="POST">
+                        <div class="form-group">
+                            <label for="name-text">Name!</label>
+                            <input type="text" id="name-text" class="form-control" aria-describedby="example-text"
+                                placeholder="Please enter name of the discovered happy hour">
+                        </div>
+                        <div class="form-group">
+                            <label for="address-text">Address!</label>
+                            <input type="text" id="address-text" class="form-control" aria-describedby="example-text"
+                                placeholder="Please enter address">
+                            <label for="duration-text">Duration!</label>
+                            <input type="text" id="duration-text" class="form-control" aria-describedby="example-text"
+                                placeholder="Please enter duration">
+                            <label for="drinks-text">Drinks!</label>
+                            <input type="text" id="drinks-text" class="form-control" aria-describedby="example-text"
+                                placeholder="Please enter drinks">
+                            <label for="food-text">Food!</label>
+                            <input type="text" id="food-text" class="form-control" aria-describedby="example-text"
+                                placeholder="Please enter food">
+                        </div>
+                        <div class="form-group">
+                            <label for="description-text">Description</label>
+                            <textarea class="form-control" id="description-text" aria-describedby="example-description"
+                                placeholder="Why is this place so amazing?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="pictures-text">PICTURES</label>
+                            <input type="text" id="pictures-text" class="form-control" aria-describedby="example-text"
+                                placeholder="Upload pictures here so we know you this magical place is tangible and accessible">
+                        </div>
+                        <button id="submit" class="btn btn-primary float-right">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<script type="text/javascript"> 
+<script type="text/javascript">
     function initialize() {
         var input = document.getElementById('address-text');
         new google.maps.places.Autocomplete(input);
-        }
+    }
 
-        google.maps.event.addDomListener(window, 'load', initialize);
-        console.log('input');
+    google.maps.event.addDomListener(window, 'load', initialize);
+    console.log('input');
 
-    </script>
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 
