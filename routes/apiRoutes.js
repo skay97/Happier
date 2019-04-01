@@ -28,7 +28,6 @@ module.exports = function (app) {
       });
   });
 
-
   // upload picture
   app.post('/upload', upload.single('photo'), (req, res) => {
     if (req.file) {
