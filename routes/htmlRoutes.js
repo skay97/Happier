@@ -1,10 +1,15 @@
 /* eslint-disable prettier/prettier */
 var db = require("../models");
 
-module.exports = function(app) {
+// upload requires
+var multer = require('multer');
+var upload = multer({dest: __dirname + '/uploads/images'});
+
+
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.happyhour.findAll({}).then(function(dbResult) {
+  app.get("/", function (req, res) {
+    db.happyhour.findAll({}).then(function (dbResult) {
       res.render("index", {
         msg: "Welcome!",
         examples: dbResult
@@ -13,8 +18,8 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/enter", function(req, res) {
-    db.happyhour.findAll({}).then(function(dbResult) {
+  app.get("/enter", function (req, res) {
+    db.happyhour.findAll({}).then(function (dbResult) {
       res.render("enter", {
         msg: "Welcome to enter page!",
         hhEntries: dbResult
@@ -26,6 +31,7 @@ module.exports = function(app) {
   app.get("/view", function(req, res) {
     db.happyhour.findAll({}).then(function(dbResult) {
       console.log(dbResult);
+      
       res.render("view", {
         msg: "Welcome to view page!",
         hhEntries: dbResult
@@ -33,27 +39,34 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/view/:id", function(req, res) {
+  app.get("/view/:id", function (req, res) {
     db.happyhour.findOne({
-      where:{
-        id:req.params.id
+      where: {
+        id: req.params.id
       }
-    }).then(function(dbResult) {
+    }).then(function (dbResult) {
       res.render("viewOne", {
         msg: "Welcome to view page!",
         hhEntry: dbResult
       });
     });
   });
-  
-  // add get route to submit page
-  app.get("/POST", function(req,res){
-    res.render("202");
-  });
+
+  // uploads route
+    app.get("/uploads", function (req, res) {
+      db.happyhour.findAll({}).then(function (dbResult) {
+        res.render("uploads", {
+          msg: "Welcome to the upload page!",
+          hhEntries: dbResult
+        });
+      });
+    });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
+
+
 
 };
