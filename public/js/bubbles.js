@@ -4,7 +4,7 @@
       defaults = {
         MAX_BUBBLE_SIZE: 100,
         MAX_BLUR: 10,
-        MAX_ANIMATION_DURATION: 1000
+        MAX_ANIMATION_DURATION: 20000
       };
       $beer = $('.beer');
       $beerEnter = $(".beer-enter")
