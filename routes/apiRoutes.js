@@ -1,6 +1,6 @@
 var db = require("../models");
 var multer = require('multer');
-var upload = multer({ dest: __dirname + '/uploads/images' });
+// var upload = multer({ dest: __dirname + '/uploads/images' });
 
 
 module.exports = function (app) {
@@ -29,10 +29,11 @@ module.exports = function (app) {
   });
 
   // upload picture
-  app.post('/upload', upload.single('photo'), (req, res) => {
+  app.post("/upload", function(req, res) {
     if (req.file) {
       res.json(req.file);
+    } else {
+      throw "error";
     }
-    else throw 'error';
   });
 };
