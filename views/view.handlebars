@@ -9,9 +9,12 @@
         <ul id="hh-list" class="list-group">
           {{#each hhEntries}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="/view/{{this.id}}">{{hh_name}}</a>
-            <p>Duration: {{this.hh_duration}}, Address: {{this.hh_address}}</p>
-            <p>Drinks: {{this.hh_drinks}} Food: {{this.hh_food}} </p>
+            <a href="/view/{{this.id}}">{{hh_name}}</a> @{{this.hh_address}}
+            <ul>
+            <li>Drinks: {{this.hh_drinks}}</li>
+            <li>Food: {{this.hh_food}} </li>
+            <li>Comments: {{this.hh_description}}</li>
+            </ul>
           </li>
           {{/each}}
         </ul>

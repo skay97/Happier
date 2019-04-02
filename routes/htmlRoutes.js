@@ -53,14 +53,14 @@ module.exports = function (app) {
   });
 
   // uploads route
-    app.get("/uploads", function (req, res) {
-      db.happyhour.findAll({}).then(function (dbResult) {
-        res.render("uploads", {
-          msg: "Welcome to the upload page!",
-          hhEntries: dbResult
-        });
+  app.get("/uploads", function (req, res) {
+    db.happyhour.findAll({}).then(function (dbResult) {
+      res.render("uploads", {
+        msg: "Welcome to the upload page!",
+        hhEntries: dbResult
       });
     });
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
