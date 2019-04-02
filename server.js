@@ -7,8 +7,8 @@ var db = require("./models");
 var path = require("path");
 
 // upload requires
-var multer = require('multer');
-var upload = multer({ dest: __dirname + 'uploads/images' });
+// var multer = require('multer');
+// var upload = multer({ dest: __dirname + 'uploads/images' });
 
 var app = express();
 var PORT = process.env.PORT || 3000;
