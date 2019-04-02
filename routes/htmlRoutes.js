@@ -2,8 +2,8 @@
 var db = require("../models");
 
 // upload requires
-var multer = require('multer');
-var upload = multer({dest: __dirname + '/uploads/images'});
+// var multer = require('multer');
+// var upload = multer({dest: __dirname + '/uploads/images'});
 
 
 module.exports = function (app) {
