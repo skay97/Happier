@@ -122,6 +122,30 @@ img{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c05600', endColorstr='#dc7000',GradientType=1 );
     /* IE6-9 */
   }
+  .beer-View {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: #c05600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #c05600 0%, #dc7000 21%, #e87c00 51%, #e87c00 81%, #dc7000 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #c05600), color-stop(21%, #dc7000), color-stop(51%, #e87c00), color-stop(81%, #e87c00), color-stop(100%, #dc7000));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #c05600 0%, #dc7000 21%, #e87c00 51%, #e87c00 81%, #dc7000 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #c05600 0%, #dc7000 21%, #e87c00 51%, #e87c00 81%, #dc7000 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #c05600 0%, #dc7000 21%, #e87c00 51%, #e87c00 81%, #dc7000 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #c05600 0%, #dc7000 21%, #e87c00 51%, #e87c00 81%, #dc7000 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c05600', endColorstr='#dc7000',GradientType=1 );
+    /* IE6-9 */
+  }
 
 .bubble {
   position: absolute;
@@ -207,6 +231,16 @@ nav {
   color: #4040a1;
 } */
 
+.nav-item {
+    color: #0009;
+    font-weight: 500;
+}
+
+.dui-elem{
+    font-size: 35px;
+    font-family: 'Abril Fatface', cursive;
+    color:#0009;
+}
 @media screen and (max-width:399px){
     .btn-box{
     display: flex;
@@ -220,7 +254,7 @@ nav {
     
 }
 
-@media screen and (max-width:544px){
+@media screen and (max-width:675px){
     .btn-box{
     display: flex;
     flex-wrap: wrap;
@@ -229,4 +263,11 @@ nav {
     .btn{
         margin-bottom: 20px;
     }   
+}
+
+@media screen and (min-height:900px){
+    .beer-enter{
+        position: relative;
+        height: 100vh;
+    }
 }

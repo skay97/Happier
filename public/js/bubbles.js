@@ -8,6 +8,7 @@
       };
       $beer = $('.beer');
       $beerEnter = $(".beer-enter")
+      $beerView = $(".beer-view")
       createBubbles = function(bubbleCount) {
         var $bubble, bubbleBlur, bubbleDelay, bubbleOpacity, bubbleScale, bubbleSize, bubbleSpeed, i, ref, results, xPos, yPos;
         results = [];
@@ -34,6 +35,7 @@
           // console.log($bubble);
           results.push($beer.append($bubble));
           results.push($beerEnter.append($bubble));
+          results.push($beerView.append($bubble));
         }
         return results;
       };

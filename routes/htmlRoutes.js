@@ -21,7 +21,7 @@ module.exports = function (app) {
   app.get("/enter", function (req, res) {
     db.happyhour.findAll({}).then(function (dbResult) {
       res.render("enter", {
-        msg: "Welcome to enter page!",
+        msg: "Welcome to DUI!",
         hhEntries: dbResult
       });
     });
