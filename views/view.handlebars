@@ -13,18 +13,27 @@
   <div class="beer-enter">
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2">
+      <div class="container col-lg-8 col-md-10 col-sm-12">
         {{!-- <h1>{{msg}}</h1> --}}
         <h1>Happy Hour List:</h1>
         <ul id="hh-list" class="list-group">
           {{#each hhEntries}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="/view/{{this.id}}">{{hh_name}}</a> @{{this.hh_address}}
-            <ul>
-            <li>Drinks: {{this.hh_drinks}}</li>
-            <li>Food: {{this.hh_food}} </li>
-            <li>Comments: {{this.hh_description}}</li>
-            </ul>
+            <strong><a href="/view/{{this.id}}">{{hh_name}}</a></strong> @{{this.hh_address}}
+            <div class="row">
+            <div class="container col-lg-8 col-md-7 col-sm-12">
+              <ul>
+                <li>Drinks: {{this.hh_drinks}}</li>
+                <li>Food: {{this.hh_food}} </li>
+                <li>Comments: {{this.hh_description}}</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8">
+              <a href="/view/{{this.id}}">
+                <img style="width: 100%" src="{{ this.hh_imgurl }}">
+              </a>
+            </div>
+            </div>
           </li>
           {{/each}}
         </ul>
