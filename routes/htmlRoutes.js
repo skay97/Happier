@@ -51,7 +51,7 @@ module.exports = function (app) {
       "https://s3-media2.fl.yelpcdn.com/bphoto/vKp72x1m2jb0-2u-o0pL3A/ls.jpg",
       "https://s3-media2.fl.yelpcdn.com/bphoto/oeekQQcmuW3tEeq1mugnWw/ls.jpg"
     ];
-    fakeimgurls.sort(() => Math.random() - 0.5); // shuffle
+    fakeimgurls.sort(function(){Math.random() - 0.5;}); // shuffle
     // fakeimgurls = Object.assign({}, fakeimgurls);
     // console.log(fakeimgurls);
     db.happyhour.findAll({}).then(function(dbResult) {
