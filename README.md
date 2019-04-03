@@ -1,7 +1,8 @@
-# Project-2
+## Project-2
 
 ## What Our App Is:
-Scalable User Input Application focussing on making the user aware of events happening near them
+
+Scalable User Input Application focussing on making the user aware of events happening near them. The earliest iteration is a user driven happy hour app that allows people to add and rate happy hours near them.
 
 ## Who We Are:
 * Daniel Marshal
@@ -9,4 +10,32 @@ Scalable User Input Application focussing on making the user aware of events hap
 * Jonathan Tran
 * Salman Karim
 
-![comingSoon](https://user-images.githubusercontent.com/44034677/54870085-f1814400-4d6f-11e9-899a-ed81ae371e54.png)
+## Deployed Demo
+
+* https://banana-sundae-26226.herokuapp.com/
+
+## Technologies
+
+* JavaScript
+* HTML
+* CSS
+* Node.JS
+* Sequelize
+* Handlebars
+* Multer
+* Google API
+* MySQL
+
+## Demo
+
+![](P2-demo.gif)
+
+### Installing Dependencies
+
+From within the root directory:
+
+```sh
+
+npm install
+
+```
