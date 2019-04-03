@@ -197,9 +197,16 @@ nav {
   justify-content: space-around
 }
 
-li{
-    color: #0009;
+#hh-list .list-group-item {
+  background-color: #f4e1d2;
 }
+.list-group-item {
+  color: #36486b;
+}
+/* .list-group-item a {
+  color: #4040a1;
+} */
+
 @media screen and (max-width:399px){
     .btn-box{
     display: flex;

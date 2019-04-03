@@ -31,7 +31,7 @@
             "filter": `blur(${bubbleBlur}px)`,
             "opacity": bubbleOpacity
           });
-          console.log($bubble);
+          // console.log($bubble);
           results.push($beer.append($bubble));
           results.push($beerEnter.append($bubble));
         }
