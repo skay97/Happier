@@ -7,6 +7,12 @@ h1{
     font-size: 75px;
     font-family: 'Abril Fatface', cursive;
 }
+
+.index-h1{
+    font-size: 75px;
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom: -20px;
+}
 .enter-h1{
     font-size:50px;
     font-family: 'Abril Fatface', cursive;
@@ -142,8 +148,24 @@ img{
 .btn{
     height:60px;
     border-radius: 20px;
-    background-color: #c05600;
-    border-color: #c05600
+    background-color: #0009;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {opacity: 1}
+
+.btn-box{
+    margin-top: 30px;
 }
 
 #home{
@@ -164,7 +186,7 @@ img{
   /* IE6-9 */
 }
 
-nav { background: #0009; display: flex; align-items: center; padding: 0 0.5rem; }
+ nav { display: flex; align-items: center; padding: 0 0.5rem; }
 nav h3 { flex: auto; margin: 0; font-size:1em; color:#f0964d; }
 nav h3 a { text-decoration: none; padding: 0.25rem 0.5rem; font-size:1em; color:#f0964d; }
 nav ul  { display: flex; list-style: none; margin: 0; padding: 0; }
@@ -173,6 +195,10 @@ nav {
   display: flex;
   align-items: flex-end;
   justify-content: space-around
+}
+
+li{
+    color: #0009;
 }
 @media screen and (max-width:399px){
     .btn-box{
