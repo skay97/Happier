@@ -1,4 +1,4 @@
-## Project-2
+## Happier
 
 ## What Our App Is:
 
